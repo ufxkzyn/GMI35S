@@ -13,6 +13,17 @@ movies_container = Class_file.CustomDictOne()
 #movies_container = []
 
 def save_movies_to_json():
+    try:
+        with open(csv_file, 'r', encoding='utf-8') as Not_used_file_pointer:
+            pass
+    except (FileNotFoundError):
+        print("Error: Det finns ingen CSV Fil eller så var filen tom.")
+        print("En tom CSV fil har skapats med följande headers.")
+        print("[titel;genre;beskrivning]")
+        with open(csv_file, 'w', newline='', encoding='utf-8') as csv_file_pointer:
+            csv_creation = csv.writer(csv_file_pointer, delimiter=';')
+            csv_creation.writerow(['titel', 'genre', 'beskrivning'])   
+            
     List_Movies = []
     with open(csv_file, 'r', encoding='utf-8') as csv_file_pointer:
         csv_reader = csv.DictReader(csv_file_pointer, delimiter=';')
