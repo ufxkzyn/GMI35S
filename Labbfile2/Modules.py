@@ -5,7 +5,7 @@ import json
 import JsonAndCSV
 
 clear = lambda: os.system('cls')
-Dict_movies = []
+#List_Of_Movies = []
 
 def wait_for_keypress():
     print("Tryck på valfri knapp för att fortsätta...")
@@ -161,3 +161,9 @@ def Remove_movie():
     print("Press any key to continue...")
     wait_for_keypress()
     clear()
+    
+#--------------------------------------------------------------------------------------
+# -------- Method to remove all movies from the json file --------------------------------
+def Remove_all_movies():
+    with open('json_file', 'w', encoding='utf-8') as json_file_pointer:
+        json.dump([], json_file_pointer, ensure_ascii=False, indent=4)

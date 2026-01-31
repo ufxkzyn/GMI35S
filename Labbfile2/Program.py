@@ -5,8 +5,8 @@ import os
 clear = lambda: os.system('cls')
 
 #--------------------------------------- Method calling list -----------------------------------------
-JsonAndCSV.save_movies_to_json()
-JsonAndCSV.print_movies_list()
+#JsonAndCSV.save_movies_to_json()
+#JsonAndCSV.print_movies_list()
 
 #------------------------------------------- Main Menu -----------------------------------------------
 while True:
@@ -16,7 +16,9 @@ while True:
     print("[3] Skriv ut alla filmer i listan              -")
     print("[4] Lägg till en ny film                       -")
     print("[5] Ta bort en film från listan                -")
-    print("[6] Stäng                                      -")
+    print("[7] Spara                                      -")
+    print("[6] Läs in från CSV till JSON                  -")
+    print("[0] Stäng                                      -")
     print("------------------------------------------------")
     choice = input()
     clear()
@@ -32,6 +34,10 @@ while True:
         case "5":
             Modules.Remove_movie()
         case "6":
+            JsonAndCSV.save_movies_to_json()
+        case "7":
+            JsonAndCSV.Save_Movies_to_CSV()   
+        case "0":
             exit(0)
         
 
