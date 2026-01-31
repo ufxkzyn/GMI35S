@@ -97,7 +97,7 @@ def MovieGeneration_Guess():
 def PrintAllMovies():
     movies = JsonAndCSV.movies_container.get_movies()
     if not movies:
-        print("Nothing to see here i guess.")
+        print("Inga filmer tillgängliga.")
         return
     print("-------------------------------- Alla filmer i listan -----------------------------------")
     for movie in movies:

@@ -5,7 +5,7 @@ import os
 clear = lambda: os.system('cls')
 
 #--------------------------------------- Method calling list -----------------------------------------
-#JsonAndCSV.save_movies_to_json()
+JsonAndCSV.save_movies_to_json()
 #JsonAndCSV.print_movies_list()
 
 #------------------------------------------- Main Menu -----------------------------------------------
