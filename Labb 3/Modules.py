@@ -167,3 +167,44 @@ def Remove_movie():
 def Remove_all_movies():
     with open('json_file', 'w', encoding='utf-8') as json_file_pointer:
         json.dump([], json_file_pointer, ensure_ascii=False, indent=4)
+
+
+#--------------------------------------------------------------------------------------
+# -------- Method to search for specific movie by name --------------------------------
+def Movie_Search():
+    with open ('json_file.json', 'r', encoding='utf-8',) as json_file_pointer:
+        Movie_Searched = []
+        Movies_Data = json.load(json_file_pointer)
+        Movie_Searched = input("Ange film att söka efter: ")
+        Search_Results = []
+        print(Movies_Data)
+        for movie in Movies_Data:
+            if movie['title'].title() == Movie_Searched.title():
+                Search_Results.append(movie)
+                print("Film hittad:")
+                print(movie)
+                Write_Search_History()
+        if not Search_Results:
+            print("Ingen film hittades med det namnet.")
+
+#--------------------------------------------------------------------------------------
+# -------- Documents search history from previous method --------------------------------
+def Write_Search_History():
+    with open ('search_history.csv', mode='w', newline='', encoding='utf-8') as Search_History_Pointer:
+        writer = csv.DictWriter(Search_History_Pointer, delimiter=';')
+        writer.writeheader(['Sökning', 'Resultat', 'Datum och Tid'])
+        writer.writerow({'Sökning': Movie_Searched, 'Resultat': Search_Results, 'Datum och Tid': Modules.get_current_datetime()})
+
+#--------------------------------------------------------------------------------------
+# -------- Menu for searching movies --------------------------------
+def Search_History_Options():
+    with open ('search_history.csv', mode='r', newline='', encoding='utf-8') as Search_History_Pointer:
+        reader = csv.reader(Search_History_Pointer)
+        while True:
+            print("Sök historik:")
+            print("Vad vill du göra?")
+            print("1. Visa sökhistorik")
+            print("2. Välj film att titta på från sökhistoriken")
+            print("3. Rensa all sökhistorik")
+            print("4. Backa till huvudmenyn")
+            choice = input("Ange ditt val (1-4): ")
