@@ -1,1 +1,76 @@
-{"Search": [{"Title": "The Matrix", "Year": "1999", "imdbID": "tt0133093", "Type": "movie", "Poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_SX300.jpg"}, {"Title": "The Matrix Reloaded", "Year": "2003", "imdbID": "tt0234215", "Type": "movie", "Poster": "https://m.media-amazon.com/images/M/MV5BNjAxYjkxNjktYTU0YS00NjFhLWIyMDEtMzEzMTJjMzRkMzQ1XkEyXkFqcGc@._V1_SX300.jpg"}, {"Title": "The Matrix Revolutions", "Year": "2003", "imdbID": "tt0242653", "Type": "movie", "Poster": "https://m.media-amazon.com/images/M/MV5BMmNmMTEzODQtNmExMS00OGUxLWFkNTItMTM3NzBlNDk0YWU5XkEyXkFqcGc@._V1_SX300.jpg"}, {"Title": "The Matrix Resurrections", "Year": "2021", "imdbID": "tt10838180", "Type": "movie", "Poster": "https://m.media-amazon.com/images/M/MV5BMDMyNDIzYzMtZTMyMy00NjUyLWI3Y2MtYzYzOGE1NzQ1MTBiXkEyXkFqcGc@._V1_SX300.jpg"}, {"Title": "Making 'The Matrix'", "Year": "1999", "imdbID": "tt0365467", "Type": "movie", "Poster": "https://m.media-amazon.com/images/M/MV5BOTZjYThlYjktMzI1Ny00ZTQ1LWEzYTYtMTQ2NzU5ZDc1MGIwXkEyXkFqcGc@._V1_SX300.jpg"}, {"Title": "The Matrix Revisited", "Year": "2001", "imdbID": "tt0295432", "Type": "movie", "Poster": "https://m.media-amazon.com/images/M/MV5BMTkzNjg3NjE4N15BMl5BanBnXkFtZTgwNTc3NTAwNzE@._V1_SX300.jpg"}, {"Title": "Enter the Matrix", "Year": "2003", "imdbID": "tt0277828", "Type": "game", "Poster": "https://m.media-amazon.com/images/M/MV5BNWM3MDU2MWQtYjdlNC00NDBlLTkyNGMtNjdhYjdlNTdiNTFlXkEyXkFqcGdeQXVyNTEwNDY2MjU@._V1_SX300.jpg"}, {"Title": "A Glitch in the Matrix", "Year": "2021", "imdbID": "tt9847360", "Type": "movie", "Poster": "https://m.media-amazon.com/images/M/MV5BYmU0NzFhYmEtMmUzNC00MjQ1LTg3NTctZDdlZmVlY2MzMDQzXkEyXkFqcGc@._V1_SX300.jpg"}, {"Title": "The Matrix: Path of Neo", "Year": "2005", "imdbID": "tt0451118", "Type": "game", "Poster": "https://m.media-amazon.com/images/M/MV5BZGFiNGU4MjEtODM2ZC00OTg0LThkNmEtZTBlN2FkMmFjOWYzXkEyXkFqcGdeQXVyNTEwNDY2MjU@._V1_SX300.jpg"}, {"Title": "CR: Enter the Matrix", "Year": "2009", "imdbID": "tt1675286", "Type": "game", "Poster": "https://m.media-amazon.com/images/M/MV5BMTExMzY3NTQ1NjleQTJeQWpwZ15BbWU3MDAyMjk2NzM@._V1_SX300.jpg"}], "totalResults": "106", "Response": "True"}
+{
+    "Search": [
+        {
+            "Title": "Inception",
+            "Year": "2010",
+            "imdbID": "tt1375666",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Inception: The Cobol Job",
+            "Year": "2010",
+            "imdbID": "tt5295894",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjE0NGIwM2EtZjQxZi00ZTE5LWExN2MtNDBlMjY1ZmZkYjU3XkEyXkFqcGdeQXVyNjMwNzk3Mjk@._V1_SX300.jpg"
+        },
+        {
+            "Title": "The Crack: Inception",
+            "Year": "2019",
+            "imdbID": "tt6793710",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZTc4MDliNjAtYmU4YS00NmQzLWEwNjktYTQ2MGFjNDc5MDhlXkEyXkFqcGc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Inception: Jump Right Into the Action",
+            "Year": "2010",
+            "imdbID": "tt5295990",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZGFjOTRiYjgtYjEzMS00ZjQ2LTkzY2YtOGQ0NDI2NTVjOGFmXkEyXkFqcGdeQXVyNDQ5MDYzMTk@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Inception: Motion Comics",
+            "Year": "2010–",
+            "imdbID": "tt1790736",
+            "Type": "series",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNGRkYzkzZmEtY2YwYi00ZTlmLTgyMTctODE0NTNhNTVkZGIxXkEyXkFqcGdeQXVyNjE4MDMwMjk@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Inception",
+            "Year": "2014",
+            "imdbID": "tt7321322",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BOTY3OGFlNTktYTJiZi00ZWMxLTk4MjQtNmJiODkxYThiNjg4XkEyXkFqcGc@._V1_SX300.jpg"
+        },
+        {
+            "Title": "Madness Inception",
+            "Year": "2022",
+            "imdbID": "tt29258696",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Inception: 4Movie Premiere Special",
+            "Year": "2010",
+            "imdbID": "tt1686778",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "Cyberalien: Inception",
+            "Year": "2017",
+            "imdbID": "tt7926130",
+            "Type": "movie",
+            "Poster": "N/A"
+        },
+        {
+            "Title": "WWA: The Inception",
+            "Year": "2001",
+            "imdbID": "tt0311992",
+            "Type": "movie",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNTEyNGJjMTMtZjZhZC00ODFkLWIyYzktN2JjMTcwMmY5MDJlXkEyXkFqcGdeQXVyNDkwMzY5NjQ@._V1_SX300.jpg"
+        }
+    ],
+    "totalResults": "41",
+    "Response": "True"
+}

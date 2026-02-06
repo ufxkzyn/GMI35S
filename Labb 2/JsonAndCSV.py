@@ -50,10 +50,3 @@ def Save_Movies_to_CSV():
         clear()
         
         
-#unsed used method, 
-def print_movies_list():
-    save_movies_to_json()
-    for movie in movies_container.get_movies():
-        print(movie)
-
-

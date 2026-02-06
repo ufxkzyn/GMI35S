@@ -1,7 +1,31 @@
-The Matrix;The Matrix;<class 'xmlrpc.client.DateTime'>
-The Matrix;The Matrix;2026-02-03 10:11:45
-The Matrix;"{'Search': [{'Title': 'The Matrix', 'Year': '1999', 'imdbID': 'tt0133093', 'Type': 'movie', 'Poster': 'https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_SX300.jpg'}, {'Title': 'The Matrix Reloaded', 'Year': '2003', 'imdbID': 'tt0234215', 'Type': 'movie', 'Poster': 'https://m.media-amazon.com/images/M/MV5BNjAxYjkxNjktYTU0YS00NjFhLWIyMDEtMzEzMTJjMzRkMzQ1XkEyXkFqcGc@._V1_SX300.jpg'}, {'Title': 'The Matrix Revolutions', 'Year': '2003', 'imdbID': 'tt0242653', 'Type': 'movie', 'Poster': 'https://m.media-amazon.com/images/M/MV5BMmNmMTEzODQtNmExMS00OGUxLWFkNTItMTM3NzBlNDk0YWU5XkEyXkFqcGc@._V1_SX300.jpg'}, {'Title': 'The Matrix Resurrections', 'Year': '2021', 'imdbID': 'tt10838180', 'Type': 'movie', 'Poster': 'https://m.media-amazon.com/images/M/MV5BMDMyNDIzYzMtZTMyMy00NjUyLWI3Y2MtYzYzOGE1NzQ1MTBiXkEyXkFqcGc@._V1_SX300.jpg'}, {'Title': ""Making 'The Matrix'"", 'Year': '1999', 'imdbID': 'tt0365467', 'Type': 'movie', 'Poster': 'https://m.media-amazon.com/images/M/MV5BOTZjYThlYjktMzI1Ny00ZTQ1LWEzYTYtMTQ2NzU5ZDc1MGIwXkEyXkFqcGc@._V1_SX300.jpg'}, {'Title': 'The Matrix Revisited', 'Year': '2001', 'imdbID': 'tt0295432', 'Type': 'movie', 'Poster': 'https://m.media-amazon.com/images/M/MV5BMTkzNjg3NjE4N15BMl5BanBnXkFtZTgwNTc3NTAwNzE@._V1_SX300.jpg'}, {'Title': 'Enter the Matrix', 'Year': '2003', 'imdbID': 'tt0277828', 'Type': 'game', 'Poster': 'https://m.media-amazon.com/images/M/MV5BNWM3MDU2MWQtYjdlNC00NDBlLTkyNGMtNjdhYjdlNTdiNTFlXkEyXkFqcGdeQXVyNTEwNDY2MjU@._V1_SX300.jpg'}, {'Title': 'A Glitch in the Matrix', 'Year': '2021', 'imdbID': 'tt9847360', 'Type': 'movie', 'Poster': 'https://m.media-amazon.com/images/M/MV5BYmU0NzFhYmEtMmUzNC00MjQ1LTg3NTctZDdlZmVlY2MzMDQzXkEyXkFqcGc@._V1_SX300.jpg'}, {'Title': 'The Matrix: Path of Neo', 'Year': '2005', 'imdbID': 'tt0451118', 'Type': 'game', 'Poster': 'https://m.media-amazon.com/images/M/MV5BZGFiNGU4MjEtODM2ZC00OTg0LThkNmEtZTBlN2FkMmFjOWYzXkEyXkFqcGdeQXVyNTEwNDY2MjU@._V1_SX300.jpg'}, {'Title': 'CR: Enter the Matrix', 'Year': '2009', 'imdbID': 'tt1675286', 'Type': 'game', 'Poster': 'https://m.media-amazon.com/images/M/MV5BMTExMzY3NTQ1NjleQTJeQWpwZ15BbWU3MDAyMjk2NzM@._V1_SX300.jpg'}], 'totalResults': '106', 'Response': 'True'}";2026-02-03 10:12:59
-The Matrix;True;2026-02-03 10:15:05
-The Matrix;True;2026-02-03 10:15:35
-The Matrix;"['The Matrix', 'The Matrix Reloaded', 'The Matrix Revolutions', 'The Matrix Resurrections', ""Making 'The Matrix'"", 'The Matrix Revisited', 'Enter the Matrix', 'A Glitch in the Matrix', 'The Matrix: Path of Neo', 'CR: Enter the Matrix']";2026-02-03 10:19:36
-The Matrix;"['The Matrix', 'The Matrix Reloaded', 'The Matrix Revolutions', 'The Matrix Resurrections', ""Making 'The Matrix'"", 'The Matrix Revisited', 'Enter the Matrix', 'A Glitch in the Matrix', 'The Matrix: Path of Neo', 'CR: Enter the Matrix']";2026-02-03 10:20:33
+CR: Enter the Matrix;An arcade Pachinko machine featuring footage from the Matrix trilogy.;2026-02-06 11:42:50
+The Matrix;Thomas A. Anderson is a man living two lives. By day he is an average computer programmer and by night a hacker known as Neo. Neo has always questioned his reality, but the truth is far beyond his imagination. Neo finds himself targeted by the police when he is contacted by Morpheus, a legendary computer hacker branded a terrorist by the government. As a rebel against the machines, Neo must confront the agents: super-powerful computer programs devoted to stopping Neo and the entire human rebellion.;2026-02-06 11:45:35
+The Matrix;Thomas A. Anderson is a man living two lives. By day he is an average computer programmer and by night a hacker known as Neo. Neo has always questioned his reality, but the truth is far beyond his imagination. Neo finds himself targeted by the police when he is contacted by Morpheus, a legendary computer hacker branded a terrorist by the government. As a rebel against the machines, Neo must confront the agents: super-powerful computer programs devoted to stopping Neo and the entire human rebellion.;2026-02-06 11:48:09
+the shawshank redemptionasdsa;False;2026-02-06 11:51:37
+the shawshank redemption;True;2026-02-06 11:52:03
+The Shawshank Redemption;"Chronicles the experiences of a formerly successful banker as a prisoner in the gloomy jailhouse of Shawshank after being found guilty of a crime he did not commit. The film portrays the man's unique way of dealing with his new, torturous life; along the way he befriends a number of fellow prisoners, most notably a wise long-term inmate named Red.";2026-02-06 11:52:03
+the shawshank redemption;;2026-02-06 11:54:23
+the shawshank redemption;;2026-02-06 11:56:44
+the shawshank redemption;;2026-02-06 11:57:44
+the shawshank redemption;;2026-02-06 11:58:10
+the shawshank redemption;;2026-02-06 11:58:18
+the shawshank redemption;;2026-02-06 12:00:16
+the shawshank redemption;;2026-02-06 12:03:57
+the shawshank redemption;;2026-02-06 12:04:20
+the shawshank redemption;;2026-02-06 12:04:43
+the shawshank redemption;;2026-02-06 12:05:05
+the shawshank redemption;;2026-02-06 12:05:55
+the shawshank redemption;;2026-02-06 12:06:25
+the shawshank redemption;;2026-02-06 12:07:10
+the shawshank redemption;;2026-02-06 12:07:56
+the shawshank redemption;;2026-02-06 12:08:03
+the shawshank redemption;;2026-02-06 12:09:37
+the shawshank redemption;;2026-02-06 12:10:07
+the shawshank redemption;;2026-02-06 12:10:19
+the shawshank redemption;;2026-02-06 12:11:05
+the shawshank redemption;;2026-02-06 12:11:47
+the shawshank redemption;;2026-02-06 12:12:25
+the shawshank redemption;;2026-02-06 12:15:33
+the shawshank redemption;;2026-02-06 12:15:43
+the shawshank redemption;2026-02-06 12:16:31
+The Matrix;2026-02-06 12:27:32
