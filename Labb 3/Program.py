@@ -1,44 +1,36 @@
-import random
-import JsonAndCSV
+from concurrent.futures import thread
 import Modules
 import os
 clear = lambda: os.system('cls')
 
-#--------------------------------------- Method calling list -----------------------------------------
-JsonAndCSV.save_movies_to_json()
-#JsonAndCSV.print_movies_list()
-
 #------------------------------------------- Main Menu -----------------------------------------------
 while True:
     print("-------------------Huvud Meny-------------------")
-    print("[1] Få filmtips inom en vald Genre             -")
-    print("[2] Gissa vilken film som beskrivs             -")
-    print("[3] Skriv ut alla filmer i listan              -")
-    print("[4] Lägg till en ny film                       -")
-    print("[5] Ta bort en film från listan                -")
-    print("[6] Läs in från CSV till JSON                  -")
-    print("[7] Spara till CSV                             -")
-    print("[0] Stäng                                      -")
+    print("[1] Enkel title search (bästa matchning)       -")
+    print("[2] Avancerad sökning (flera resultat)         -")
+    print("[3] Sökhistorik inställningar                  -")
+    print("[4] Avsluta                                    -")
     print("------------------------------------------------")
-    choice = input()
+    choice = input("Välj ett alternativ (1-4): ")
     clear()
     match choice:
         case "1":
-            Modules.MovieBasedOnGenre()
+            movie_name = input("Ange filmtitel att söka efter: ")
+            Modules.Api_search_best_match(movie_name)
+            Modules.wait_for_keypress()
+            clear()
         case "2":
-            Modules.MovieGeneration_Guess()
+            movie_name = input("Ange filmtitel att söka efter: ")
+            Modules.Api_search(movie_name)
+            
         case "3":
-            Modules.PrintAllMovies()
+            Modules.Search_History_Options()
+            Modules.wait_for_keypress()
+            clear()
         case "4":
-            Modules.Addmovie()
-        case "5":
-            Modules.Remove_movie()
-        case "6":
-            JsonAndCSV.save_movies_to_json()
-        case "7":
-            JsonAndCSV.Save_Movies_to_CSV()   
-        case "0":
-            exit(0)
-        
+            print("Tack för att du använde vår tjänst!")
+            break
+        case _:
+            print("Ogiltigt val. Försök igen.")
+            clear()
 
-    
