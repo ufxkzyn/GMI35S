@@ -1,0 +1,10 @@
+{
+    "Regnr" : "ABC123",
+    "Märke" : "Volvo",
+    "Modell" : "V70",
+    "Årsmodell" : 2010,
+    "Färg" : "Blå",
+    "Ägare" : "John Doe",
+    "Inlämnad" : "2024-06-01",
+    "Status" : "Under reparation"
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥷🏻💵</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" class="actions">
+        <h1>Ruffel och Båg </h1>
+        <form action="/" method="post">
+            <button type="submit" name="action" value="add" onclick='New_Car_Add()'>Lägg till ny bil</button> <br>
+            <button type="submit" name="action" value="update" onclick='Car_Update()'>Updatera en bil</button><br>
+            <button type="submit" name="action" value="check" onclick='Car_Inventory()'>Kolla igenom registret</button><br>
+    </form>
+    </div>
+</body>
+
+<body>
+    {% if action == "add" %}
+    <div>
+        <form action="/" method="post">
+            <input type="text" name="regnr" placeholder="Regnr" id="Regnr"><br>
+            <input type="text" name="make" placeholder="Märke" id="Brand" required><br>
+            <input type="text" name="model" placeholder="Modell" id="Model" required><br>
+            <input type="number" name="year" placeholder="År" id="Year" required><br>
+            <input type="text" name="color" placeholder="Färg" id="Color" required><br>
+            <input type="text" name="FirstName" placeholder="Första namn" id="Owner_Firstname" required>
+            <input type="text" name="LastName" placeholder="Efternamn" id="Owner_Lastname" required><br>
+            <p>Välj en status på bilen</p>
+            <select name='status' id='Bil_Status' required>   <!-- Skapa en dropdown-meny https://www.w3schools.com/tags/tag_select.asp -->
+                <option value='Under reparation'>Under reparation</option>
+                <option value='Färdig'>Färdig</option>
+                <option value='Uthämtad'>Uthämtad</option>
+            </select>
+            <button type="submit">Lägg till</button>
+        <h1>Hide this until used!</h1>
+    </div>
+</body>
+</html>
+
+    "Regnr" : "ABC123",
+    "Märke" : "Volvo",
+    "Årsmodell" : 2010,
+    "Färg" : "Blå",
+    "Ägare" : "John Doe",
+    "Inlämnad" : "2024-06-01",
+    "Status" : "Under reparation"
