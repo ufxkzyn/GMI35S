@@ -1,10 +1,24 @@
 {
-    "Regnr" : "ABC123",
-    "Märke" : "Volvo",
-    "Modell" : "V70",
-    "Årsmodell" : 2010,
-    "Färg" : "Blå",
-    "Ägare" : "John Doe",
-    "Inlämnad" : "2024-06-01",
-    "Status" : "Under reparation"
+    "ABC123": {
+        "Regnr": "ABC123",
+        "Make": "volvo",
+        "Model": "v70",
+        "Year": 1969,
+        "Color": "red",
+        "Owner_Firstname": "G\u00f6ran",
+        "Owner_Lastname": "Bask",
+        "Status": "Borttappad",
+        "Added_Time": "2026-02-12 12:18:17"
+    },
+    "null": {
+        "Regnr": null,
+        "Make": null,
+        "Model": null,
+        "Year": null,
+        "Color": null,
+        "Owner_Firstname": null,
+        "Owner_Lastname": null,
+        "Status": null,
+        "Added_Time": "2026-02-12 12:45:31"
+    }
 }

@@ -11,16 +11,17 @@ Cars_bpV1 = Blueprint('Cars_bpV1', __name__)
 ##################################################################
 @Cars_bpV1.route('/', methods=['GET'])
 def index():
-    return "Hello start page"
-
+    return render_template('index.html')
 
 
 ##################################################################
-@Cars_bpV1.route('/Add_New_Car_Data', methods=['POST'])
+@Cars_bpV1.route('/Add_New_Car_Data', methods=['POST', 'GET'])
 def Add_New_Car_Data():
+    
     with open('cars.json', 'r', encoding="UTF-8") as file_car_pointer:
         Add_New_Car_Data = json.load(file_car_pointer)
         
+    
     New_Car_Regnr = request.form.get('Regnr')
     New_Car_Make = request.form.get('Make')
     New_Car_Model = request.form.get('Model')
@@ -31,7 +32,20 @@ def Add_New_Car_Data():
     New_Car_Status = request.form.get('status')
     New_Car_Added_Time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    return 200
+    Add_New_Car_Data[New_Car_Regnr] = {
+        "Regnr": New_Car_Regnr,
+        "Make": New_Car_Make,
+        "Model": New_Car_Model,
+        "Year": New_Car_Year,
+        "Color": New_car_Color,
+        "Owner_Firstname": New_Car_Owner_Firstname,
+        "Owner_Lastname": New_Car_Owner_Lastname,
+        "Status": New_Car_Status,
+        "Added_Time": New_Car_Added_Time}
+    
+    with open('cars.json', 'w', encoding="UTF-8") as file_car_pointer:
+        json.dump(Add_New_Car_Data, file_car_pointer, indent=4)
+    return "Allt gick bra!", 200
 
 
 
@@ -45,21 +59,23 @@ def Car_Inventory():
 
 
 ##################################################################
-@Cars_bpV1.route('/Car_Remove', methods=['DELETE'])
+@Cars_bpV1.route('/Car_Remove', methods=['POST', 'GET'])
 def Car_Remove():   
+    Car_Data = []
     with open('cars.json', 'r', encoding="UTF-8") as file_car_pointer:
         Car_Data = json.load(file_car_pointer)
-    if regnr in Car_Data.keys():
-        del Car_Data[regnr]
+    if "Regnr" in Car_Data.keys():
+        del Car_Data["Regnr"]
         with open('cars.json', 'w', encoding="UTF-8") as file_car_pointer:
-            json.dump(Car_Data, file_car_pointer, indent=4)
-        return 200
+            json.dump(Car_Data, file_car_pointer, indent=4, ensure_ascii=False, encoding="UTF-8")
+            
+    return 'allt gick bra!', 200
     
     
     
     
 ##################################################################
-@Cars_bpV1.route('/Change_Car_Information', methods=['PUT'])
+@Cars_bpV1.route('/Change_Car_Information', methods=['POST', 'GET'])
 def Change_Car_Information():
     with open('cars.json', 'r', encoding="UTF-8") as file_car_pointer:
         Car_Data = json.load(file_car_pointer)
@@ -86,7 +102,7 @@ def Change_Car_Information():
 
     with open('cars.json', 'w', encoding="UTF-8") as file_car_pointer:
         json.dump(Car_Data, file_car_pointer, indent=4)
-    return 200
+    return "gick bra",200
 
 
 
@@ -97,10 +113,12 @@ def Change_Car_Information():
 ##################################################################
 @Cars_bpV1.route('/json', methods=['GET', 'POST', 'DELETE', 'PUT'])
 def Load_Json():
+    Car_Data = []
     with open('cars.json', 'r', encoding="UTF-8") as file_car_pointer:
         Car_Data = json.load(file_car_pointer)
 
 def Save_Json():
+    Car_Data = []
     with open('cars.json', 'w', encoding="UTF-8") as file_car_pointer:
         json.dump(Car_Data, file_car_pointer, indent=4) 
         
