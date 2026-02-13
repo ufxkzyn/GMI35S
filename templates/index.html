@@ -74,41 +74,6 @@
     </div>
     {%endif%}
 </body>
-<!-- 
-<body>
-    {% if action == "update" %}
-    <div class="container" class="actions">
-        <h2>Ange vilken bil det gäller </h2>
-        <form action="/api/v1/Change_Car_Information" method="POST">
-            <input type="text" name="Regnr" placeholder="Regnr"><br>
-            <button type="submit" name="action" value="CheckRegnr">Sök</button> <br>
-            {% if error == "True" %}
-                <p style="color: red;"> Bilen hittades inte </p>
-            {%endif%}
-        </form>
-    
-            {% if error == "False" %}
-            <form action="/api/v1/Change_Car_Information" method="POST"></form>
-            <button type="submit" name="action" value="Make">Ändra märke</button> <br>
-            <button type="submit" name="action" value="Model">Ändra modell</button><br>
-            <button type="submit" name="action" value="Year">Ändra år</button><br>
-            <button type="submit" name="action" value="Color">Ändra färg</button><br>
-            <button type="submit" name="action" value="Firstname">Ändra förnamnet på ägaren</button>
-            <button type="submit" name="action" value="Lastname">Ändra efternamnet på ägaren</button>
-
-            <p>Välj en status på bilen</p>
-            <select name='status' id='Bil_Status'>    Skapa en dropdown-meny https://www.w3schools.com/tags/tag_select.asp 
-                <option value='Under reparation'>Under reparation</option>
-                <option value='Färdig'>Färdig</option>
-                <option value='Uthämtad'>Uthämtad</option>
-            </select>
-            <button type="submit">Updatera</button>
-            {%endif%}
-            </form>
-    </div>
-    {%endif%}
-</body>
- -->
 
 <body>
     {% if action == "check" %}
@@ -133,7 +98,6 @@
     {% if action == "update" %}
     <div class="container" div style="margin-top: 20px;">
 
-        {% if fulloptions != "True" %}
         <form action="/api/v1/Change_Car_Information" method="POST">
             <input type="text" name="Regnr" placeholder="Regnr" required><br>
             <button type="submit">Ändra något om detta Regnr</button>
@@ -141,40 +105,29 @@
             {% if error == "True" %}
             <p style="color: red;"> Bilen hittades inte </p>
             {%endif%}
-
-            {% if Carstatus == 'updated' %}
-            <p style="color: green;"> Bilen har uppdaterats </p>
-            {%endif%}
         </form>
-         {%endif%}
 
-        {% if fulloptions == "True" %}
-
+        {% if error == "False" %}
         <form action="/api/v1/Change_Car_Information" method="POST">
             <div class="container" div style="margin-top: 20px;">
+            <input type="hidden" name="Regnr" value="{{request.form.get('Regnr')}}">
             <p> Vad vill du ändra? </p>
-            <input type="hidden" name="fulloptions" value="True">
-            <input type="hidden" name="Regnr" value="{{ Regnr }}">
-
-
                 <input type="text" name="Make" placeholder="Märke"><br>
                 <input type="text" name="Model" placeholder="Modell"><br>
                 <input type="number" name="Year" placeholder="År"><br>
                 <input type="text" name="Color" placeholder="Färg"><br>
-                <input type="text" name="FirstName" placeholder="Första namn"><br>
-
-
-
+                <input type="text" name="FirstName" placeholder="Förnamn">
+                <input type="text" name="LastName" placeholder="Efternamn"><br>
 
             <p>Välj en status på bilen</p>
-            <select name='status' id='Bil_Status'>   <!-- Skapa en dropdown-meny https://www.w3schools.com/tags/tag_select.asp -->
+            <select name='status' id='Bil_Status'>   <!-- create a dropdown-meny https://www.w3schools.com/tags/tag_select.asp -->
                 <option value='Under reparation'>Under reparation</option>
                 <option value='Färdig'>Färdig</option>
                 <option value='Uthämtad'>Uthämtad</option>
             </select>
-            <button type="submit">Updatera</button>
-            </div>
-        {% endif %}
+            <button type="submit" >Updatera</button> 
+            </div> 
+        {%endif%}
     </div>   
     {%endif%}
 </body>

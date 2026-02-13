@@ -12,13 +12,13 @@
     },
     "obz487": {
         "Regnr": "obz487",
-        "Make": null,
+        "Make": "Renault",
         "Model": null,
         "Year": null,
         "Color": null,
         "Owner_Firstname": null,
         "Owner_Lastname": null,
-        "Status": null,
+        "Status": "Under reparation",
         "Added_Time": "2026-02-13 02:28:25"
     }
 }

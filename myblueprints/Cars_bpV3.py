@@ -96,16 +96,12 @@ def Change_Car_Information():
         Car_Data = json.load(file_car_pointer)
         
     regnr = request.form.get('Regnr')
-    fulloptions = request.form.get('fulloptions')
+
     
     if regnr not in Car_Data.keys():
         return render_template('index.html', error="True", action='update'), 404
 
-    if regnr in Car_Data.keys() and fulloptions != "True":
-        return render_template('index.html', fulloptions = "True", action='update'), 200
-    
-    if fulloptions == "True" and regnr in Car_Data.keys():
-        
+    if regnr in Car_Data.keys():
         if request.form.get('Make') != "":
             Car_Data[regnr]['Make'] = request.form.get('Make')
         if request.form.get('Model') != "":
@@ -175,6 +171,3 @@ def Carchoice():
         return render_template('index.html', action=action)
     elif action == "delete":
         return render_template('index.html', action=action)
-    
-    elif action == "CheckRegnr":
-        return render_template('index.html', action=action, error="False")
