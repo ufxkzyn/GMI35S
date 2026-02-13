@@ -31,19 +31,20 @@
 <body>
     <div class="container" class="actions">
         <h1>Ruffel och Båg </h1>
-        <form action="/" method="POST">
-            <button type="submit" name="action" value="add" onclick='Add_New_Car_Data()'>Lägg till ny bil</button> <br>
-            <button type="submit" name="action" value="update" onclick='Change_Car_Information()'>Updatera en bil</button><br>
-            <button type="submit" name="action" value="check" onclick='Car_Inventory()'>Kolla igenom registret</button><br>
-            <button type="submit" name="action" value="delete" onclick='Delete_Car()'>Ta bort en bil</button><br>
+        <form action="/api/v1/Carchoice" method="POST">
+            <button type="submit" name="action" value="add">Lägg till ny bil</button> <br>
+            <button type="submit" name="action" value="update">Updatera en bil</button><br>
+            <button type="submit" name="action" value="check">Sök efter bil</button><br>
+            <button type="submit" name="action" value="delete">Ta bort en bil</button><br>
     </form>
     </div>
 </body>
 
 <body>
     {% if action == "add" %}
-    <div>
-        <form action="/api/v1/new_car_data" method="POST">
+    <div class="container" div style="margin-top: 20px;">
+        <h2>Lägger till ny bil</h2>
+        <form action="/api/v1/Add_New_Car_Data" method="POST">
             <input type="text" name="Regnr" placeholder="Regnr"><br>
             <input type="text" name="Make" placeholder="Märke" required><br>
             <input type="text" name="Model" placeholder="Modell" required><br>
@@ -58,33 +59,113 @@
                 <option value='Uthämtad'>Uthämtad</option>
             </select>
             <button type="submit">Lägg till</button>
-        <h1>Hide this until used!!!</h1>
     </div>
     {%endif%}
 </body>
 
 <body>
     {% if action == "delete" %}
-    <div>
+    <div class="container" div style="margin-top: 20px;">
+        <h2>Ange vilken bil det gäller </h2>
         <form action="/api/v1/Car_Remove" method="POST">
             <input type="text" name="Regnr" placeholder="Regnr"><br>
-            <button type="submit">Ta bort</button>
-        <h1>Hide this until used!!!</h1>
+            <h3>DETTA ÄR PERMANENT</h3>
+            <button type="submit" >Ta bort</button>
+    </div>
+    {%endif%}
+</body>
+<!-- 
+<body>
+    {% if action == "update" %}
+    <div class="container" class="actions">
+        <h2>Ange vilken bil det gäller </h2>
+        <form action="/api/v1/Change_Car_Information" method="POST">
+            <input type="text" name="Regnr" placeholder="Regnr"><br>
+            <button type="submit" name="action" value="CheckRegnr">Sök</button> <br>
+            {% if error == "True" %}
+                <p style="color: red;"> Bilen hittades inte </p>
+            {%endif%}
+        </form>
+    
+            {% if error == "False" %}
+            <form action="/api/v1/Change_Car_Information" method="POST"></form>
+            <button type="submit" name="action" value="Make">Ändra märke</button> <br>
+            <button type="submit" name="action" value="Model">Ändra modell</button><br>
+            <button type="submit" name="action" value="Year">Ändra år</button><br>
+            <button type="submit" name="action" value="Color">Ändra färg</button><br>
+            <button type="submit" name="action" value="Firstname">Ändra förnamnet på ägaren</button>
+            <button type="submit" name="action" value="Lastname">Ändra efternamnet på ägaren</button>
+
+            <p>Välj en status på bilen</p>
+            <select name='status' id='Bil_Status'>    Skapa en dropdown-meny https://www.w3schools.com/tags/tag_select.asp 
+                <option value='Under reparation'>Under reparation</option>
+                <option value='Färdig'>Färdig</option>
+                <option value='Uthämtad'>Uthämtad</option>
+            </select>
+            <button type="submit">Updatera</button>
+            {%endif%}
+            </form>
+    </div>
+    {%endif%}
+</body>
+ -->
+
+<body>
+    {% if action == "check" %}
+    <div class="container" div style="margin-top: 20px;">
+        <h2>Ange vilken bil</h2>
+        <form action="/api/v1/Car_Inventory" method="POST" style="display: inline-block">
+            <input type="text" name="Regnr" placeholder="Regnr" required><br>
+            <button type="submit">Sök</button>
+        </form>    
+        <form action="/api/v1/Car_Inventory" method="POST" style="display: inline-block; margin-left: -120px;" >
+            <button type="submit" name="DisplayAll" value="True">Visa alla bilar</button>
+        </form>
+        {% if error == "True" %}
+            <p style="color: red;"> Bilen hittades inte </p>
+        {%endif%}
     </div>
     {%endif%}
 </body>
 
+
 <body>
     {% if action == "update" %}
-    <div>
+    <div class="container" div style="margin-top: 20px;">
+
+        {% if fulloptions != "True" %}
         <form action="/api/v1/Change_Car_Information" method="POST">
             <input type="text" name="Regnr" placeholder="Regnr" required><br>
-            <input type="text" name="Make" placeholder="Märke"><br>
-            <input type="text" name="Model" placeholder="Modell"><br>
-            <input type="number" name="Year" placeholder="År"><br>
-            <input type="text" name="Color" placeholder="Färg"><br>
-            <input type="text" name="FirstName" placeholder="Första namn">
-            <input type="text" name="LastName" placeholder="Efternamn"><br>
+            <button type="submit">Ändra något om detta Regnr</button>
+
+            {% if error == "True" %}
+            <p style="color: red;"> Bilen hittades inte </p>
+            {%endif%}
+
+            {% if Carstatus == 'updated' %}
+            <p style="color: green;"> Bilen har uppdaterats </p>
+            {%endif%}
+        </form>
+         {%endif%}
+
+        {% if fulloptions == "True" %}
+
+        <form action="/api/v1/Change_Car_Information" method="POST">
+            <div class="container" div style="margin-top: 20px;">
+            <p> Vad vill du ändra? </p>
+            <input type="hidden" name="fulloptions" value="True">
+            <input type="hidden" name="Regnr" value="{{ Regnr }}">
+
+
+                <input type="text" name="Make" placeholder="Märke"><br>
+                <input type="text" name="Model" placeholder="Modell"><br>
+                <input type="number" name="Year" placeholder="År"><br>
+                <input type="text" name="Color" placeholder="Färg"><br>
+                <input type="text" name="FirstName" placeholder="Första namn"><br>
+
+
+
+
             <p>Välj en status på bilen</p>
             <select name='status' id='Bil_Status'>   <!-- Skapa en dropdown-meny https://www.w3schools.com/tags/tag_select.asp -->
                 <option value='Under reparation'>Under reparation</option>
@@ -92,11 +173,11 @@
                 <option value='Uthämtad'>Uthämtad</option>
             </select>
             <button type="submit">Updatera</button>
-        <h1>Hide this until used!!!</h1>
-    </div>
+            </div>
+        {% endif %}
+    </div>   
     {%endif%}
 </body>
-
 
 
 </html>

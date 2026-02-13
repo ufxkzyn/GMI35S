@@ -10,8 +10,8 @@
         "Status": "Borttappad",
         "Added_Time": "2026-02-12 12:18:17"
     },
-    "null": {
-        "Regnr": null,
+    "obz487": {
+        "Regnr": "obz487",
         "Make": null,
         "Model": null,
         "Year": null,
@@ -19,6 +19,6 @@
         "Owner_Firstname": null,
         "Owner_Lastname": null,
         "Status": null,
-        "Added_Time": "2026-02-12 12:45:31"
+        "Added_Time": "2026-02-13 02:28:25"
     }
 }
